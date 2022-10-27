@@ -18,6 +18,37 @@ namespace StringManipulationChallenge
             //implement the required code here and within the methods below.
             //
             //
+            Console.WriteLine("Please enter your message and press enter");
+            userInputString = Console.ReadLine();
+
+            Console.WriteLine("Please enter a number LESS THAN the length of your string and press enter");
+            elementNum = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(StringToUpper(userInputString));
+
+            Console.WriteLine(StringToLower(userInputString));
+
+            Console.WriteLine(StringTrim(userInputString));
+            
+            Console.WriteLine(StringSubstring(userInputString, elementNum));
+
+            Console.WriteLine("For which character should I search in your original message?");
+            char1 = char.Parse(Console.ReadLine());
+
+            Console.WriteLine(SearchChar(userInputString, char1));
+
+            Console.WriteLine("What is your first name?");
+            fName= Console.ReadLine();
+            Console.WriteLine("What is your last name?");
+            lName= Console.ReadLine();
+
+            Console.WriteLine(ConcatNames(fName,lName));
+
+
+
+
+
+
 
 
         }
@@ -28,7 +59,10 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringToUpper(string x){
-            throw new NotImplementedException("StringToUpper method not implemented.");
+          //  throw new NotImplementedException("StringToUpper method not implemented.");
+                 Console.WriteLine(x.ToUpper());
+                 return x.ToUpper();
+        
         }
 
         // This method has one string parameter. 
@@ -37,7 +71,9 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.        
         public static string StringToLower(string x){
-            throw new NotImplementedException("StringToUpper method not implemented.");
+          //  throw new NotImplementedException("StringToUpper method not implemented.");
+            Console.WriteLine(x.ToLower());
+            return x.ToLower();
 
         }
         
@@ -47,7 +83,13 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringTrim(string x){
-            throw new NotImplementedException("StringTrim method not implemented.");
+           // throw new NotImplementedException("StringTrim method not implemented.");
+            x = x.TrimStart();
+            x= x.TrimEnd();
+
+            Console.WriteLine(x);
+
+            return x;
 
         }
         
@@ -57,7 +99,11 @@ namespace StringManipulationChallenge
         // 2) print the result to the console and 
         // 3) return the new string.
         public static string StringSubstring(string x, int elementNum){
-            throw new NotImplementedException("StringSubstring method not implemented.");
+           // throw new NotImplementedException("StringSubstring method not implemented.");
+
+            Console.WriteLine(x.Substring(elementNum));
+
+            return x.Substring(elementNum);
 
         }
 
@@ -66,7 +112,8 @@ namespace StringManipulationChallenge
         // 1) search the string parameter for the char parameter
         // 2) return the index of the char.
         public static int SearchChar(string userInputString, char x){
-            throw new NotImplementedException("SearchChar method not implemented.");
+           // throw new NotImplementedException("SearchChar method not implemented.");
+            return userInputString.IndexOf(x);
         }
 
         // This method has two string parameters.
@@ -74,7 +121,9 @@ namespace StringManipulationChallenge
         // 1) concatenate the two strings with a space between them.
         // 2) return the new string.
         public static string ConcatNames(string fName, string lName){
-            throw new NotImplementedException("ConcatNames method not implemented.");
+           // throw new NotImplementedException("ConcatNames method not implemented.");
+
+            return fName +" "+lName;
         }
 
 
